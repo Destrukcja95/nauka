@@ -59,3 +59,29 @@
         
     </script>
 </html>
+
+
+<html>
+
+<body>
+    <form>
+    Username: <input id="username" type="text" name="name" value="wpisz">
+    Password: <input id="password" type="text" name="surname">
+    <button id="login" type="button" onclick="logData()">Login</button>    
+    </form>
+    </body>
+    
+    <script>
+        var trueName = "user";
+        var truePass = "pass";
+        function logData() {
+			
+           if (document.getElementById("username").value == trueName && document.getElementById("password").value == truePass){
+                alert("Login succesfully")
+            } else{
+                alert("Login failed")
+            }          
+        } 
+        
+    </script>
+</html>
