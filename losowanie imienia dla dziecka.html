@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+ <meta charset="UTF-8">
+ <title>Wylosuj imię dla dziecka</title>
+ <style>
+  html {
+   font-family: arial;
+  }
+
+  button {
+   display: block;
+   margin: 50px auto 50px;
+   background-color: #fff;
+   border: 5px solid cadetblue;
+   padding: 20px 50px;
+   font-size: 22px
+  }
+
+  div {
+   margin: 10px;
+   font-size: 26px;
+   text-align: center;
+  }
+ </style>
+</head>
+
+<body>
+ <button>Losuj imię dla dziecka</button>
+ <div></div>
+
+ <script>const btn = document.querySelector('button');
+    const div = document.querySelector('div');
+    
+    const names = ["Jagienka", "Dobrawa (Dobrusia)", "Daria", "Asia", "Kira", "Marysia", "Anastazja", "Kasia"];
+    
+    const prefixs = ["Wydaje mi się", "Mam wrażenie", "Szczerze powiedziawszy, myślę", "Szczerze uważam", "Na 100% twierdzę", "Jestem pewien"];
+    
+    // console.log(names[index]);
+    
+    const nameGenerator = () => {
+     const indexName = Math.floor(Math.random() * names.length);
+     // const indexPrefix = Math.floor(Math.random() * prefixs.length);
+     // div.textContent = `${prefixs[indexPrefix]}, że najlepsze będzie imię ${names[indexName]}`
+     div.textContent = `${prefixs[Math.floor(Math.random() * prefixs.length)]}, że najlepsze będzie imię ${names[indexName]}`
+    }
+    
+    btn.addEventListener('click', nameGenerator)
+ </script>
+</body>
+
+</html>

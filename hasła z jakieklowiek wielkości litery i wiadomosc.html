@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Projekt 5 - hasło</title>
+ <style>
+  body {
+   margin: 5vw;
+   text-align: center;
+   font-family: arial;
+  }
+  label,
+  input {
+   height: 40px;
+   line-height: 40px;
+   font-size: 30px;
+  }
+  div {
+   border: 2px solid black;
+   font-size: 40px;
+   margin: 20px;
+  }
+
+ </style>
+</head>
+
+<body>
+ <label for="pass">Wprowadź hasło: </label><input id="pass" type="text">
+ <div></div>
+ <script>
+     const input = document.querySelector("input");
+const passwords = ['jedEN', 'DwA'];
+const messages = ["super", "działa!"]
+
+const showMessage = (e) => {
+ passwords.forEach((item, i) => {
+  if (item.toLowerCase() === e.target.value.toLowerCase()) {
+   document.querySelector('div').textContent = messages[i];
+  }
+ })
+}
+
+input.addEventListener("input", showMessage)
+
+
+ </script>
+</body>
+
+</html>
